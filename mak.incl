@@ -1,0 +1,16 @@
+
+IMFRAME_CC=$(wildcard $(IMFRAME_PATH)/../protobuf/*.cc)   
+IMFRAME_C=$(wildcard $(IMFRAME_PATH)/../redis_client/*.c)  $(wildcard $(IMFRAME_PATH)/src/base/*.c)
+IMFRAME_CPP=$(wildcard $(IMFRAME_PATH)/src/base/*.cpp) $(wildcard  $(IMFRAME_PATH)/src/core/*.cpp) $(wildcard $(IMFRAME_PATH)/src/app/*.cpp) 
+IMFRAME_SRC=$(IMFRAME_CC)
+IMFRAME_SRC+=$(IMFRAME_C)
+IMFRAME_SRC+=$(IMFRAME_CPP)
+#IMFRAME_CPP=$(wildcard *cpp)
+
+IMFRAME_OBJ=$(patsubst %.c,%.o,$(IMFRAME_C))
+IMFRAME_OBJ+=$(patsubst %.cc,%.o,$(IMFRAME_CC))
+IMFRAME_OBJ+=$(patsubst %.cpp,%.o,$(IMFRAME_CPP))
+
+CFLAGS = -g  -I$(IMFRAME_PATH)/src/base  -I$(IMFRAME_PATH)/src/core  -I$(IMFRAME_PATH)/src/app   -I$(IMFRAME_PATH)/../protobuf/ -I$(IMFRAME_PATH)/../redis_client/  -L/usr/local/lib --std=c++11 
+
+LIBFLAGS = -ldl -lpthread -levent -levent_pthreads  -lprotobuf   -llog4cpp  

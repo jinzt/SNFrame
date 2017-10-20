@@ -1,0 +1,80 @@
+IM.Message.pb.o: ../protobuf/IM.Message.pb.cc ../protobuf/IM.Message.pb.h \
+ ../protobuf/IM.BaseDefine.pb.h
+IM.Group.pb.o: ../protobuf/IM.Group.pb.cc ../protobuf/IM.Group.pb.h \
+ ../protobuf/IM.BaseDefine.pb.h
+IM.UserState.pb.o: ../protobuf/IM.UserState.pb.cc \
+ ../protobuf/IM.UserState.pb.h ../protobuf/IM.BaseDefine.pb.h
+IM.Buddy.pb.o: ../protobuf/IM.Buddy.pb.cc ../protobuf/IM.Buddy.pb.h \
+ ../protobuf/IM.BaseDefine.pb.h
+IM.File.pb.o: ../protobuf/IM.File.pb.cc ../protobuf/IM.File.pb.h \
+ ../protobuf/IM.BaseDefine.pb.h
+IM.Router.pb.o: ../protobuf/IM.Router.pb.cc ../protobuf/IM.Router.pb.h \
+ ../protobuf/IM.BaseDefine.pb.h
+IM.BaseDefine.pb.o: ../protobuf/IM.BaseDefine.pb.cc \
+ ../protobuf/IM.BaseDefine.pb.h
+IM.DBProxy.pb.o: ../protobuf/IM.DBProxy.pb.cc ../protobuf/IM.DBProxy.pb.h
+IM.D2G.pb.o: ../protobuf/IM.D2G.pb.cc ../protobuf/IM.D2G.pb.h \
+ ../protobuf/IM.BaseDefine.pb.h
+IM.RedisStruct.pb.o: ../protobuf/IM.RedisStruct.pb.cc \
+ ../protobuf/IM.RedisStruct.pb.h
+IM.Server.pb.o: ../protobuf/IM.Server.pb.cc ../protobuf/IM.Server.pb.h \
+ ../protobuf/IM.BaseDefine.pb.h
+IM.Other.pb.o: ../protobuf/IM.Other.pb.cc ../protobuf/IM.Other.pb.h
+IM.Status.pb.o: ../protobuf/IM.Status.pb.cc ../protobuf/IM.Status.pb.h \
+ ../protobuf/IM.BaseDefine.pb.h
+IM.SwitchService.pb.o: ../protobuf/IM.SwitchService.pb.cc \
+ ../protobuf/IM.SwitchService.pb.h
+IM.Login.pb.o: ../protobuf/IM.Login.pb.cc ../protobuf/IM.Login.pb.h \
+ ../protobuf/IM.BaseDefine.pb.h
+net.o: ../redis_client/net.c ../redis_client/fmacros.h \
+ ../redis_client/net.h ../redis_client/hiredis.h ../redis_client/sds.h
+hiredis.o: ../redis_client/hiredis.c ../redis_client/hiredis.h \
+ ../redis_client/net.h ../redis_client/sds.h ../redis_client/util.h
+dict.o: ../redis_client/dict.c ../redis_client/fmacros.h \
+ ../redis_client/dict.h
+sds.o: ../redis_client/sds.c ../redis_client/sds.h
+cJSON_Utils.o: src/base/cJSON_Utils.c src/base/cJSON_Utils.h \
+ src/base/cJSON.h
+cJSON.o: src/base/cJSON.c src/base/cJSON.h
+PbBuf.o: src/base/PbBuf.cpp src/base/PbBuf.h src/base/Define.h
+ThreadBase.o: src/base/ThreadBase.cpp src/base/ThreadBase.h
+ConfigFileReader.o: src/base/ConfigFileReader.cpp \
+ src/base/ConfigFileReader.h
+Lock.o: src/base/Lock.cpp src/base/Lock.h
+Log.o: src/base/Log.cpp src/base/Log.h
+IMString.o: src/base/IMString.cpp src/base/IMString.h
+Redis.o: src/base/Redis.cpp src/base/Redis.h
+HttpParser.o: src/core/HttpParser.cpp src/core/HttpParser.h
+TcpServer.o: src/core/TcpServer.cpp src/core/TcpServer.h \
+ src/core/ServerStatus.h src/core/Config.h
+ServiceNode.o: src/core/ServiceNode.cpp src/core/ServiceNode.h
+RouterNode.o: src/core/RouterNode.cpp src/core/RouterNode.h
+IMServer.o: src/core/IMServer.cpp src/core/IMServer.h \
+ src/core/TcpServer.h src/core/ServerStatus.h src/core/Config.h
+StateNode.o: src/core/StateNode.cpp src/core/StateNode.h
+HttpServer.o: src/core/HttpServer.cpp src/core/HttpServer.h \
+ src/core/HttpParser.h src/core/ServerStatus.h
+ServerStatus.o: src/core/ServerStatus.cpp src/core/ServerStatus.h \
+ src/core/Config.h
+ThreadPool.o: src/core/ThreadPool.cpp src/core/ThreadPool.h
+Main.o: src/core/Main.cpp src/core/IMServer.h src/core/TcpServer.h \
+ src/core/ServerStatus.h src/core/Config.h
+Connection.o: src/core/Connection.cpp
+Service.o: src/core/Service.cpp src/core/Service.h
+LibEvent.o: src/core/LibEvent.cpp src/core/LibEvent.h \
+ src/core/NetLibBase.h
+NodeMgr.o: src/core/NodeMgr.cpp src/core/NodeMgr.h
+DbNode.o: src/core/DbNode.cpp src/core/DbNode.h
+Recver.o: src/core/Recver.cpp src/core/Recver.h
+NetManager.o: src/core/NetManager.cpp src/core/NetManager.h
+NetServer.o: src/core/NetServer.cpp src/core/NetServer.h
+ConnNode.o: src/core/ConnNode.cpp src/core/ConnNode.h
+ProtocolHandler.o: src/core/ProtocolHandler.cpp \
+ src/core/ProtocolHandler.h
+Timer.o: src/core/Timer.cpp src/core/Timer.h
+Sender.o: src/core/Sender.cpp src/core/Sender.h
+Netutil.o: src/core/Netutil.cpp
+Node.o: src/core/Node.cpp src/core/Node.h
+PbProtocolHandler.o: src/core/PbProtocolHandler.cpp \
+ src/core/PbProtocolHandler.h
+ApplicationBase.o: src/app/ApplicationBase.cpp
